@@ -8,7 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { AppearanceProvider } from "react-native-appearance";
 import { Appearance, SafeAreaView, StatusBar, Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
-import { darkTheme, lightTheme, Styles } from "./Styles";
+import { darkTheme, lightTheme } from "./Styles";
 import { ApolloProvider, useReactiveVar } from "@apollo/client";
 import client, { isLoggedInVar, tokenVar, cache } from "./apollo";
 import LoggedInNav from "./navigators/LoggedInNav";
@@ -20,6 +20,7 @@ export default function App() {
 	const [loading, setLoading] = useState(true);
 	const onFinish = () => setLoading(false);
 	const isLoggedIn = useReactiveVar(isLoggedInVar);
+
 	const preloadAssets = () => {
 		const fontsToLoad = [Ionicons.font];
 		const fontPromises = fontsToLoad.map((font) => Font.loadAsync(font));
@@ -37,7 +38,6 @@ export default function App() {
 	//FIXME: 16.1 (LIKE PART 2) persistCache에서 serialize:false 대신 persist.perge 추가함
 	const preload = async () => {
 		const token = await AsyncStorage.getItem("token");
-		// console.log("PRELOAD token : " + token);
 
 		if (token) {
 			isLoggedInVar(true);

@@ -30,16 +30,11 @@ export default function Login({ route, kakaoLogIn }) {
 	});
 
 	// For Social Login
-	const [socialModalVisible, setSocialModalVisible] = useState(false);
-	const [source, setSource] = useState(undefined);
 
 	const passwordRef = useRef();
 
-	const closeSocialModal = () => {
-		setSocialModalVisible(false);
-	};
-
 	const onCompleted = async (data) => {
+		console.log(data);
 		const {
 			login: { ok, token },
 		} = data;
@@ -75,19 +70,6 @@ export default function Login({ route, kakaoLogIn }) {
 
 	return (
 		<AuthLayout>
-			{source !== undefined && (
-				<SocialWebviewModal
-					visible={socialModalVisible}
-					source={source}
-					closeSocialModal={closeSocialModal}
-				/>
-			)}
-			<TouchableOpacity onPress={kakaoLogIn}>
-				<Text style={{ color: "#391B1B", fontSize: 18, fontWeight: "bold" }}>
-					카카오 로그인
-				</Text>
-			</TouchableOpacity>
-
 			<TextInput
 				value={watch("email")}
 				placeholder="Email"
@@ -116,12 +98,6 @@ export default function Login({ route, kakaoLogIn }) {
 				disabled={!watch("email") || !watch("password")}
 				onPress={handleSubmit(onValid)}
 			/>
-
-			{/* <TouchableOpacity onPress={() => navigation.navigate("CreateAccount")}>
-        <View>
-          <Text>Go to CreateAccount</Text>
-        </View>
-      </TouchableOpacity> */}
 		</AuthLayout>
 	);
 }
