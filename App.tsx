@@ -73,6 +73,7 @@ export default function App() {
 				<ThemeProvider theme={lightTheme}>
 					<NavigationContainer>
 						{isLoggedIn ? <LoggedInNav /> : <LoggedOutNav />}
+						{/* <LoggedInNav /> */}
 					</NavigationContainer>
 				</ThemeProvider>
 			</AppearanceProvider>

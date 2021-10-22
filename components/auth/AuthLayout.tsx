@@ -1,11 +1,5 @@
 import React from "react";
-import {
-	Keyboard,
-	KeyboardAvoidingView,
-	Platform,
-	TouchableOpacity,
-	TouchableWithoutFeedback,
-} from "react-native";
+import { KeyboardAvoidingView, Platform } from "react-native";
 import styled from "styled-components/native";
 import DismissKeyboard from "../DismissKeyboard";
 
@@ -33,7 +27,7 @@ const LogoText = styled.Text`
 	letter-spacing: 10px;
 `;
 
-const AuthLayout = ({ children }) => {
+const AuthLayout: React.FC<React.ReactNode> = ({ children }) => {
 	return (
 		<DismissKeyboard>
 			<Container>
@@ -45,10 +39,7 @@ const AuthLayout = ({ children }) => {
 					keyboardVerticalOffset={Platform.OS === "ios" ? 70 : 20}
 				>
 					<LogoText>PINPLE</LogoText>
-					{/* <Logo
-            resizeMode="contain"
-            source={require("../../assets/flower-pot.png")}
-          /> */}
+
 					{children}
 				</KeyboardAvoidingView>
 			</Container>

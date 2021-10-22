@@ -8,7 +8,7 @@ import Notifications from "../screens/Feed/Notifications";
 import Me from "../screens/Profile/Me";
 import { Image } from "react-native";
 import Likes from "../screens/Common/Likes";
-import EditProfile from "../screens/Auth/EditProfile";
+import EditProfile from "../screens/Profile/EditProfile";
 import CommentScreen from "../screens/Common/CommentScreen";
 import Home from "../screens/Home/Home";
 

@@ -1,5 +1,7 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+
+import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import AuthButton from "../../components/auth/AuthButton";
 import AuthLayout from "../../components/auth/AuthLayout";
@@ -19,7 +21,9 @@ const LoginLink = styled.Text`
 	text-align: center;
 `;
 
-export default function Welcome({ navigation }) {
+const Welcome: React.FC<NativeStackScreenProps<any, "Welcome">> = ({
+	navigation,
+}) => {
 	const goToCreateAccount = () => navigation.navigate("CreateAccount");
 	const goToLogIn = () => navigation.navigate("LogIn");
 
@@ -38,4 +42,6 @@ export default function Welcome({ navigation }) {
 			</LoginWrap>
 		</AuthLayout>
 	);
-}
+};
+
+export default Welcome;
