@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components/native";
 import { useForm } from "react-hook-form";
-import { Styles } from "../Styles";
-import Comment from "../components/Comment";
+import { Styles } from "../../Styles";
+import Comment from "../../components/Comment";
 import { FlatList, KeyboardAvoidingView, Text } from "react-native";
-import ScreenLayout from "../components/ScreenLayout";
+import ScreenLayout from "../../components/ScreenLayout";
 import { Ionicons } from "@expo/vector-icons";
 import { gql, useMutation, useQuery } from "@apollo/client";
-import useMe from "../hook/useMe";
-import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../fragments";
+import useMe from "../../hook/useMe";
+import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../../fragments";
 
 const CommentContainer = styled.View`
   width: 92%;

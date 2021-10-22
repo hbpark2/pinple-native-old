@@ -55,7 +55,12 @@ const TabsNav = () => {
 				}}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => (
-						<TabIcon iconName={"camera"} color={color} focused={focused} />
+						<TabIcon
+							iconName={"md-add-circle"}
+							color={color}
+							focused={focused}
+							size={30}
+						/>
 					),
 				}}
 			/>
@@ -72,7 +77,7 @@ const TabsNav = () => {
 				component={View}
 				options={{
 					tabBarIcon: ({ focused, color, size }) => (
-						<TabIcon iconName={"search"} color={color} focused={focused} />
+						<TabIcon iconName={"chatbubbles"} color={color} focused={focused} />
 					),
 				}}
 			></Tabs.Screen>

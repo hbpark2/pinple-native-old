@@ -7,9 +7,9 @@ import Search from "../screens/Search/Search";
 import Notifications from "../screens/Feed/Notifications";
 import Me from "../screens/Profile/Me";
 import { Image } from "react-native";
-import Likes from "../screens/Likes";
+import Likes from "../screens/Common/Likes";
 import EditProfile from "../screens/Auth/EditProfile";
-import CommentScreen from "../screens/CommentScreen";
+import CommentScreen from "../screens/Common/CommentScreen";
 import Home from "../screens/Home/Home";
 
 const Stack = createStackNavigator();

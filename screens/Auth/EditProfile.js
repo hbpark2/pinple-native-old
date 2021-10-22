@@ -17,7 +17,7 @@ import { FEED_PHOTO } from "../../fragments";
 import Swiper from "react-native-swiper";
 import { of } from "zen-observable";
 import AuthLayout from "../../components/auth/AuthLayout";
-import PhotoAlbum from "../UploadPhoto/PhotoAlbum";
+import PhotoAlbum from "../Common/PhotoAlbum";
 
 const Container = styled.ScrollView`
   flex: 1;

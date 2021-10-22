@@ -1,13 +1,13 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React from "react";
 import { FlatList, Text, View } from "react-native";
-import { isLoggedInVar, tokenVar } from "../apollo";
+import { isLoggedInVar, tokenVar } from "../../apollo";
 import styled from "styled-components/native";
 import { gql, useQuery } from "@apollo/client";
-import { USER_FRAGMENT } from "../fragments";
-import ScreenLayout from "../components/ScreenLayout";
+import { USER_FRAGMENT } from "../../fragments";
+import ScreenLayout from "../../components/ScreenLayout";
 import { useState } from "react";
-import UserRow from "../components/UserRow";
+import UserRow from "../../components/UserRow";
 
 const LIKES_QUERY = gql`
 	query seePhotoLikes($id: Int!) {
