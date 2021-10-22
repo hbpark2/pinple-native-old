@@ -9,7 +9,6 @@ import { logUserIn } from "../../apollo";
 import AuthButton from "../../components/auth/AuthButton";
 import AuthLayout from "../../components/auth/AuthLayout";
 import { TextInput } from "../../components/auth/AuthShare";
-import SocialWebviewModal from "../../components/SocialWebviewModal";
 
 const LOGIN_MUTATION = gql`
 	mutation login($email: String!, $password: String!) {
@@ -21,15 +20,13 @@ const LOGIN_MUTATION = gql`
 	}
 `;
 
-export default function Login({ route, kakaoLogIn }) {
+export default function Login({ route }) {
 	const { register, handleSubmit, setValue, watch } = useForm({
 		defaultValues: {
 			email: route?.params?.email,
 			password: route?.params?.password,
 		},
 	});
-
-	// For Social Login
 
 	const passwordRef = useRef();
 
@@ -72,7 +69,7 @@ export default function Login({ route, kakaoLogIn }) {
 		<AuthLayout>
 			<TextInput
 				value={watch("email")}
-				placeholder="Email"
+				placeholder="휴대폰 번호 (- 없이 숫자만 입력)"
 				returnKeyType="next"
 				autoCapitalize="none"
 				placeholderTextColor="gray"
@@ -80,20 +77,8 @@ export default function Login({ route, kakaoLogIn }) {
 				onSubmitEditing={() => onNext(passwordRef)}
 			/>
 
-			<TextInput
-				value={watch("password")}
-				ref={passwordRef}
-				placeholder="Password"
-				secureTextEntry
-				returnKeyType="done"
-				lastOne={true}
-				placeholderTextColor="gray"
-				onChangeText={(text) => setValue("password", text)}
-				onSubmitEditing={handleSubmit(onValid)}
-			/>
-
 			<AuthButton
-				text="Log In"
+				text="인증문자 받기"
 				loading={loading}
 				disabled={!watch("email") || !watch("password")}
 				onPress={handleSubmit(onValid)}

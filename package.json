@@ -51,6 +51,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@types/apollo-upload-client": "^14.1.0",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.31",
     "@types/react-native": "^0.65.10",

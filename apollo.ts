@@ -20,7 +20,7 @@ export const tokenVar = makeVar("");
 
 const TOKEN = "token";
 
-export const logUserIn = async (token) => {
+export const logUserIn = async (token: string) => {
 	await AsyncStorage.setItem(TOKEN, token);
 	isLoggedInVar(true);
 	tokenVar(token);

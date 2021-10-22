@@ -23,9 +23,11 @@ export default function App() {
 
 	const preloadAssets = () => {
 		const fontsToLoad = [Ionicons.font];
-		const fontPromises = fontsToLoad.map((font) => Font.loadAsync(font));
+		const fontPromises: any = fontsToLoad.map((font) => Font.loadAsync(font));
 		const imagesToLoad = [require("./assets/flower-pot.png")];
-		const imagePromises = imagesToLoad.map((image) => Asset.loadAsync(image));
+		const imagePromises: any = imagesToLoad.map((image) =>
+			Asset.loadAsync(image)
+		);
 
 		return Promise.all([...fontPromises, ...imagePromises]);
 	};
@@ -49,7 +51,7 @@ export default function App() {
 			storage: new AsyncStorageWrapper(AsyncStorage),
 		});
 
-		return preloadAssets();
+		await preloadAssets();
 	};
 
 	if (loading) {
