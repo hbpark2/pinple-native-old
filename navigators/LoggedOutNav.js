@@ -1,8 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Welcome from "../screens/Welcome";
-import LogIn from "../screens/LogIn";
-import CreateAccount from "../screens/CreateAccount";
+import Welcome from "../screens/Auth/Welcome";
+import LogIn from "../screens/Auth/LogIn";
+import CreateAccount from "../screens/Auth/CreateAccount";
 import LoginContainer from "../components/KakaoLogin";
 
 const Stack = createStackNavigator();

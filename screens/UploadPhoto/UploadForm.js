@@ -4,9 +4,9 @@ import { ReactNativeFile } from "apollo-upload-client";
 import { useForm } from "react-hook-form";
 import { ActivityIndicator, Text, TouchableOpacity, View } from "react-native";
 import styled from "styled-components/native";
-import DismissKeyboard from "../components/DismissKeyboard";
-import { Styles } from "../Styles";
-import { FEED_PHOTO } from "../fragments";
+import DismissKeyboard from "../../components/DismissKeyboard";
+import { Styles } from "../../Styles";
+import { FEED_PHOTO } from "../../fragments";
 import Swiper from "react-native-swiper";
 
 const Container = styled.ScrollView`

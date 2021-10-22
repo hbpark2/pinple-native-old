@@ -1,8 +1,8 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import SelectPhoto from "../screens/SelectPhoto";
-import TakePhoto from "../screens/TakePhoto";
+import SelectPhoto from "../screens/UploadPhoto/SelectPhoto";
+import TakePhoto from "../screens/UploadPhoto/TakePhoto";
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Tab = createMaterialTopTabNavigator();

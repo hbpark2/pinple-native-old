@@ -1,10 +1,10 @@
 import React from "react";
 import { RefreshControl, Text, TouchableOpacity, View } from "react-native";
 import { gql, useQuery } from "@apollo/client";
-import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../fragments";
+import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../../fragments";
 import { ScrollView } from "react-native-gesture-handler";
-import Photo from "../components/Photo";
-import ScreenLayout from "../components/ScreenLayout";
+import Photo from "../../components/Photo";
+import ScreenLayout from "../../components/ScreenLayout";
 import { useState } from "react";
 
 const SEE_PHOTO = gql`

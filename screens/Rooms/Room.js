@@ -3,8 +3,8 @@ import { gql, useApolloClient, useMutation, useQuery } from "@apollo/client";
 import { useForm } from "react-hook-form";
 import { FlatList, KeyboardAvoidingView, Text, View } from "react-native";
 import styled from "styled-components/native";
-import ScreenLayout from "../components/ScreenLayout";
-import useMe from "../hook/useMe";
+import ScreenLayout from "../../components/ScreenLayout";
+import useMe from "../../hook/useMe";
 import { Ionicons } from "@expo/vector-icons";
 
 const MessageContainer = styled.View`

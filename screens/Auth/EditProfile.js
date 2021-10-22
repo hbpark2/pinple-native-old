@@ -11,13 +11,13 @@ import {
   View,
 } from "react-native";
 import styled from "styled-components/native";
-import DismissKeyboard from "../components/DismissKeyboard";
-import { Styles } from "../Styles";
-import { FEED_PHOTO } from "../fragments";
+import DismissKeyboard from "../../components/DismissKeyboard";
+import { Styles } from "../../Styles";
+import { FEED_PHOTO } from "../../fragments";
 import Swiper from "react-native-swiper";
 import { of } from "zen-observable";
-import AuthLayout from "../components/auth/AuthLayout";
-import PhotoAlbum from "./PhotoAlbum";
+import AuthLayout from "../../components/auth/AuthLayout";
+import PhotoAlbum from "../UploadPhoto/PhotoAlbum";
 
 const Container = styled.ScrollView`
   flex: 1;

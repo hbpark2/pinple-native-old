@@ -9,11 +9,11 @@ import {
   Text,
   View,
 } from "react-native";
-import AuthButton from "../components/auth/AuthButton";
-import AuthLayout from "../components/auth/AuthLayout";
-import { TextInput } from "../components/auth/AuthShare";
+import AuthButton from "../../components/auth/AuthButton";
+import AuthLayout from "../../components/auth/AuthLayout";
+import { TextInput } from "../../components/auth/AuthShare";
 import styled from "styled-components/native";
-import { logUserIn } from "../apollo";
+import { logUserIn } from "../../apollo";
 
 const FormError = styled.Text`
   color: tomato;

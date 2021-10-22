@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { FlatList, Text } from "react-native";
 import styled from "styled-components/native";
 import { gql, useQuery } from "@apollo/client";
-import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../fragments";
-import ProfileHeader from "../components/ProfileHeader";
-import Photo from "../components/Photo";
+import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../../fragments";
+import ProfileHeader from "../../components/ProfileHeader";
+import Photo from "../../components/Photo";
 
 const Container = styled.View`
   flex: 1;

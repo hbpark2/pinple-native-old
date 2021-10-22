@@ -1,8 +1,8 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
-import Room from "../screens/Room";
-import Rooms from "../screens/Rooms";
+import Room from "../screens/Rooms/Room";
+import Rooms from "../screens/Rooms/Rooms";
 
 const Stack = createStackNavigator();
 

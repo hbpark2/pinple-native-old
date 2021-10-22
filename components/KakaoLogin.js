@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Login from "../screens/LogIn";
+import Login from "../screens/Auth/LogIn";
 import * as AuthSession from "expo-auth-session";
 import gql from "graphql-tag";
 

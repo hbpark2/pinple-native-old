@@ -5,11 +5,11 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Text, TouchableOpacity } from "react-native";
-import { logUserIn } from "../apollo";
-import AuthButton from "../components/auth/AuthButton";
-import AuthLayout from "../components/auth/AuthLayout";
-import { TextInput } from "../components/auth/AuthShare";
-import SocialWebviewModal from "../components/SocialWebviewModal";
+import { logUserIn } from "../../apollo";
+import AuthButton from "../../components/auth/AuthButton";
+import AuthLayout from "../../components/auth/AuthLayout";
+import { TextInput } from "../../components/auth/AuthShare";
+import SocialWebviewModal from "../../components/SocialWebviewModal";
 
 const LOGIN_MUTATION = gql`
 	mutation login($email: String!, $password: String!) {

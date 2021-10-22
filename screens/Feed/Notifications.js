@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { FlatList, Text, View } from "react-native";
 import styled from "styled-components/native";
 import { gql, useMutation, useQuery } from "@apollo/client";
-import { NOTIFICATION_FRAGMENT } from "../fragments";
-import ScreenLayout from "../components/ScreenLayout";
-import NotificationItem from "../components/NotificationItem";
+import { NOTIFICATION_FRAGMENT } from "../../fragments";
+import ScreenLayout from "../../components/ScreenLayout";
+import NotificationItem from "../../components/NotificationItem";
 
 const SEE_NOTIFICATIONS = gql`
   query seeNotifications($id: Int) {

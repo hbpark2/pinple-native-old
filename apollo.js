@@ -15,8 +15,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createUploadLink } from "apollo-upload-client";
 import { WebSocketLink } from "@apollo/client/link/ws";
 
-// HEROKU :  https://hwamoak-backend.herokuapp.com/graphql
-
 export const isLoggedInVar = makeVar(false);
 export const tokenVar = makeVar("");
 
@@ -74,7 +72,6 @@ export const cache = new InMemoryCache({
 		Query: {
 			fields: {
 				seeFeed: offsetLimitPagination(["username"]),
-				seeWholePlantsFeed: offsetLimitPagination(),
 				seeComments: offsetLimitPagination(["id"]),
 			},
 		},

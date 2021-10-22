@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components/native";
 import * as MediaLibrary from "expo-media-library";
 import { Ionicons } from "@expo/vector-icons";
-import { Styles } from "../Styles";
+import { Styles } from "../../Styles";
 import {
   FlatList,
   Image,

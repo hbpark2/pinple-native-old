@@ -1,14 +1,14 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
-import { isLoggedInVar, logUserOut, tokenVar } from "../apollo";
+import { isLoggedInVar, logUserOut, tokenVar } from "../../apollo";
 import styled from "styled-components/native";
-import useMe from "../hook/useMe";
-import ProfileHeader from "../components/ProfileHeader";
+import useMe from "../../hook/useMe";
+import ProfileHeader from "../../components/ProfileHeader";
 import { gql, useApolloClient, useQuery } from "@apollo/client";
-import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../fragments";
-import Photo from "../components/Photo";
-import ScreenLayout from "../components/ScreenLayout";
+import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../../fragments";
+import Photo from "../../components/Photo";
+import ScreenLayout from "../../components/ScreenLayout";
 
 const SEE_PROFILE_QUERY = gql`
   query seeProfile($username: String!) {
