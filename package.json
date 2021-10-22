@@ -51,8 +51,10 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@types/jest": "^27.0.2",
     "@types/react": "^17.0.31",
     "@types/react-native": "^0.65.10",
+    "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components": "^5.1.15",
     "@types/styled-components-react-native": "^5.1.1",
     "babel-plugin-styled-components": "^1.13.3",
