@@ -72,8 +72,8 @@ export default function App() {
 				</SafeAreaView>
 				<ThemeProvider theme={lightTheme}>
 					<NavigationContainer>
-						{isLoggedIn ? <LoggedInNav /> : <LoggedOutNav />}
-						{/* <LoggedInNav /> */}
+						{/* {isLoggedIn ? <LoggedInNav /> : <LoggedOutNav />} */}
+						<LoggedInNav />
 					</NavigationContainer>
 				</ThemeProvider>
 			</AppearanceProvider>

@@ -1,5 +1,6 @@
 import {
 	ApolloClient,
+	ApolloLink,
 	createHttpLink,
 	InMemoryCache,
 	makeVar,
@@ -44,8 +45,8 @@ const authLink = setContext((_, { headers }) => {
 // uri: "https://hwamoak-backend.herokuapp.com/graphql",
 // uri: "http://localhost:4000/graphql",
 
-const uploadHttpLink = createUploadLink({
-	uri: "http://localhost:4000/graphql",
+const uploadHttpLink: any = createUploadLink({
+	uri: "https://hwamoak-backend.herokuapp.com/graphql",
 });
 
 const wsLink = new WebSocketLink({

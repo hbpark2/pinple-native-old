@@ -1,12 +1,9 @@
 import { useMutation } from "@apollo/client";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import gql from "graphql-tag";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { logUserIn } from "../../apollo";
-import AuthButton from "../../components/auth/AuthButton";
-import AuthLayout from "../../components/auth/AuthLayout";
-import { TextInput } from "../../components/auth/AuthShare";
+import AuthButton from "../../../components/auth/AuthButton";
+import { TextInput } from "../../../components/auth/AuthShare";
 
 const Authentication = () => {
 	const { register, handleSubmit, setValue, watch } = useForm();
@@ -28,7 +25,7 @@ const Authentication = () => {
 				autoCapitalize="none"
 				placeholderTextColor="gray"
 				onChangeText={(text) => setValue("phoneNumber", text)}
-				// onSubmitEditing={handleSubmit(onValid)}
+				onSubmitEditing={handleSubmit(onValid)}
 			/>
 
 			<AuthButton
